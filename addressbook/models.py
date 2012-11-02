@@ -24,7 +24,6 @@ TEL_TYPES = (
     ('Mobile', 'Mobile'),
     ('Work', 'Work'),
     ('Fax', 'Fax'),
-    ('Skype', 'Skype'),
 )
 
 EMAIL_TYPES = (
