@@ -78,6 +78,10 @@ class Contact(models.Model):
     qr_image = models.ImageField(upload_to="qr_images/", blank=True, null=True)
     twitter_handle = models.CharField(max_length = "50", blank=True, null=True)
     linkedin_handle = models.CharField(max_length = "50", blank=True, null=True)
+    is_featured = models.BooleanField(default=False,
+        help_text='Designates whether the user should be displayed '
+                    'on Public Browse page.')
+    featured_order = models.PositiveIntegerField(blank = True, null=True)
 
     def __init__(self, *args, **kwargs):
         super(Contact, self).__init__(*args, **kwargs)
