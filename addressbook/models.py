@@ -89,7 +89,7 @@ class Contact(models.Model):
         self.profile_image.thumbnail_storage = avatar_storage
 
     def __unicode__(self):
-        return "%s %s" % (self.first_name, self.last_name)
+        return "%s" % (self.group.user.username)
 
 class Address(models.Model):
     contact = models.ForeignKey(Contact)
