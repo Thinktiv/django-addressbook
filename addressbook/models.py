@@ -82,6 +82,8 @@ class Contact(models.Model):
         help_text='Designates whether the user should be displayed '
                     'on Public Browse page.')
     featured_order = models.PositiveIntegerField(blank = True, null=True)
+    active = models.BooleanField(default=False,
+        help_text='Designates whether the user is activated or not.')
 
     def __init__(self, *args, **kwargs):
         super(Contact, self).__init__(*args, **kwargs)
